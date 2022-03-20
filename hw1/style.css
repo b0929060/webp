@@ -1,0 +1,41 @@
+@media screen {
+  body h1 {
+    border-top:2px dotted;
+    border-bottom:2px dotted;
+    text-align:center;
+    margin:100px;
+  }
+  .mission {
+    background-color: #F2E6E6;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 3vmin;
+    float:left;
+    margin:20px;
+  }
+  .main {
+    background-color: #F2E6E6;
+    border-radius: 20px;
+    font-size: 3vmin;
+    float:left;
+    padding: 10px;
+    margin: 20px;
+  }
+  hr {
+    min-width: 100%;
+    border: 0;
+    border-top: 2px dotted;
+  }
+  img {
+    display:block;
+    max-width:300px;
+    float:left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .pic {
+    min-width: 20%;
+    max-width: 500px;
+    float:left;
+    margin:20px;
+  }
