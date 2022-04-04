@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>打字機2.0</title>
+<script>
+    var CODE = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var codeArray = [];
+var number = 0; 
+ 
+function createCode(){
+	var index = parseInt(Math.random()*26);
+	return CODE.charAt(index);
+};
+function createLabel(code){
+	var label = document.createElement("label");
+	label.id="label";
+	label.innerHTML = code;
+	label.code = code;
+	return label;
+}
+	document.documentElement.onkeydown=function(event){
+		var keyCode = event.keyCode; 
+		var code = String.fromCharCode(keyCode);
+		for ( var i = 0; i < codeArray.length; i++) {
+			var label = codeArray[i];
+			if(label.code==code){
+					clearInterval(label.interval_id);
+					label.parentNode.removeChild(label);
+					codeArray.splice(i,1);
+					number++;
+					document.getElementById("msg").innerHTML = "按對:"+number;
+				break;
+			}
+		}
+	};
+document.addEventListener('keydown',createWord);
+function createWord () {
+    game_id=setInterval( function() {
+        var code =createCode();
+        var label = createLabel(code);
+        document.body.append(label);
+        codeArray.push(label);
+    },2500);        
+}
+
+</script>
+</head>
+<body>
+    <div id="msg">按下任意鍵開始</div>
+    <p id="label"></p>
+</body>
+</html>
