@@ -1,4 +1,4 @@
-document.addEventListener('keydown',logkey);
+document.addEventListener('keypress',logkey);
 function logkey() {
 var log = document.createElement("t"); 
       log.innerHTML = String.fromCharCode(event.keyCode); 
