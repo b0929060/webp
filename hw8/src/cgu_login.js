@@ -10,7 +10,7 @@ const Login=()=>{
   <LockIcon /></IconButton>
         <h2>CGU Login</h2>
     </div><div>
-            <p>Email</p><input></input>
+            <p>Email</p><input type="email"></input>
             <p>Password</p><input type="password"></input>
         </div>
         <div>
