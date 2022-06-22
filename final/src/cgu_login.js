@@ -6,7 +6,7 @@ const Login=()=>{
     var output=[];
     output.push(
     <label style={{margin:'50px'}}><div>
-        <h2>CGU Login</h2>
+        <h2>Login</h2>
     </div>
     <Box
       component="form"
